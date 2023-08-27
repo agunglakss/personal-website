@@ -1,6 +1,7 @@
 ---
 import Link from "./shared/Link.astro";
 import presentation from "@/data/presentation";
+import programingLanguage from "@/data/tools";
 ---
 
 <ul role="list" class="flex flex-row gap-2">
@@ -12,6 +13,18 @@ import presentation from "@/data/presentation";
         </li>
 
         {presentation.socials.length - 1 !== index && <li>/</li>}
+      </>
+    ))
+  }
+</ul>
+
+<ul role="list" class="flex flex-row gap-2">
+  {
+    programingLanguage.map((data) => (
+      <>
+      <span class="inline-flex items-center rounded-md  px-3 py-2 text-xs font-medium ring-1 ring-inset">
+          {data.title}
+        </span>
       </>
     ))
   }
